@@ -7,21 +7,26 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        anton: ["Anton", "sans-serif"],
+        geo: ["Geo", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+      },
       colors: {
         background: {
-          dark: colors.neutral[900],
-          DEFAULT: colors.neutral[800],
-          light: colors.neutral[700],
+          //dark: colors.neutral[900],
+          DEFAULT: "#08091b",
+          //light: colors.neutral[700],
         },
         primary: {
-          dark: colors.red[700],
-          DEFAULT: colors.red[500],
-          light: colors.red[300],
+          //dark: colors.red[700],
+          DEFAULT: "#e33748",
+          //light: colors.red[300],
         },
         secondary: {
-          dark: colors.red[700],
-          DEFAULT: colors.red[500],
-          light: colors.red[300],
+          //dark: colors.red[700],
+          DEFAULT: "#1F236C",
+          //light: colors.red[300],
         },
         accent: {
           dark: colors.red[700],
@@ -36,6 +41,14 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }) => {
+      addUtilities({
+        ".center": {
+          "@apply flex justify-center items-center": {}
+        },
+      });
+    },
+  ],
 }
 
