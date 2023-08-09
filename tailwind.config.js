@@ -29,9 +29,9 @@ export default {
           //light: colors.red[300],
         },
         accent: {
-          dark: colors.red[700],
+          //dark: colors.red[700],
           DEFAULT: colors.red[500],
-          light: colors.red[300],
+          //light: colors.red[300],
         },
         text: {
           dark: colors.neutral[500],
