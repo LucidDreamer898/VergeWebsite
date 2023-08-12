@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { clamp } from "../../utils/helpers";
 
 export default function HomePage(){
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -18,7 +19,12 @@ export default function HomePage(){
 
   return(
     <div className="h-full overflow-y-scroll overflow-x-clip w-[100vw]" id="scrollable">
-      <img src="/Chassis.png" className="absolute -z-20 w-[100vw] object-cover " style={{opacity: scrollPercent + 0.2}} alt="Verge Robotics Chassis"/>
+      <div className="absolute -z-20 w-[100vw] h-full center">
+        <img src="/Chassis.png" className="w-full object-cover" style={{opacity: 0}} alt="Verge Robotics Chassis"/>
+      </div>
+      <div className="absolute -z-20 w-[100vw] h-full center">
+        <img src="/TeamPic.jpg" className="w-full object-cover" style={{opacity: 0}} alt="Team Picture"/>
+      </div>
       <div className="relative center flex-col h-full">
         <img className="absolute -z-10" src="/VectorV.svg" alt="Verge Logo"/>
 
@@ -34,7 +40,7 @@ export default function HomePage(){
       </div>
       <div className="h-screen flex items-end p-8">
         <div>
-          <h1 className="font-bold text-2xl text-text-light mb-1">Chassis</h1>
+          <h1 className="font-bold text-2xl text-text-light mb-1">About Us</h1>
           <p className="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum pulvinar urna, at fringilla mi pretium a. Nulla sed arcu eu justo sodales molestie eget ut libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque id purus vitae ex consequat sollicitudin eget eu sapien.</p>
         </div>
       </div>
