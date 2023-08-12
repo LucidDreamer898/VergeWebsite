@@ -54,3 +54,7 @@ body{
 .navbar-element{
   @apply tracking-[2px] transition-all duration-300 hover:tracking-[8px] h-24
 }
+
+h1{
+  @apply text-text-light font-bold text-3xl
+}

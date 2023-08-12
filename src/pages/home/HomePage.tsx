@@ -8,7 +8,7 @@ export default function HomePage(){
     const element = document.getElementById('scrollable');
     if(!element) return;
     element.onscroll = () => {
-      const percent = element.scrollTop / window.innerHeight;
+      const percent = element.scrollTop / (element.scrollHeight - window.innerHeight)
       setScrollPercent(percent);
     }
 
@@ -19,12 +19,9 @@ export default function HomePage(){
 
   return(
     <div className="h-full overflow-y-scroll overflow-x-clip w-[100vw]" id="scrollable">
-      <div className="absolute -z-20 w-[100vw] h-full center">
-        <img src="/Chassis.png" className="w-full object-cover" style={{opacity: 0}} alt="Verge Robotics Chassis"/>
-      </div>
-      <div className="absolute -z-20 w-[100vw] h-full center">
-        <img src="/TeamPic.jpg" className="w-full object-cover" style={{opacity: 0}} alt="Team Picture"/>
-      </div>
+      {/* <div className="absolute -z-20 w-[100vw] h-full center">
+        <img src="/Chassis.png" className="w-full object-cover" style={{opacity: ((scrollPercent * 0.5)+0.5), transform: `scale(${((scrollPercent * 0.2)+0.8)})`}} alt="Verge Robotics Chassis"/>
+      </div> */}
       <div className="relative center flex-col h-full">
         <img className="absolute -z-10" src="/VectorV.svg" alt="Verge Logo"/>
 
@@ -38,13 +35,17 @@ export default function HomePage(){
           Verge Robotics
         </h2>
       </div>
-      <div className="h-screen flex items-end p-8">
-        <div>
-          <h1 className="font-bold text-2xl text-text-light mb-1">About Us</h1>
-          <p className="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum pulvinar urna, at fringilla mi pretium a. Nulla sed arcu eu justo sodales molestie eget ut libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque id purus vitae ex consequat sollicitudin eget eu sapien.</p>
+      <div className="center space-x-4 p-4 border-2">
+        <div className="bg-yellow-500 h-32 w-full center flex-col">
+          <div className="w-72 h-96 bg-"></div>
+        </div>
+        <div className="bg-red-500 h-32 w-full center flex-col">
+          
+        </div>
+        <div className="bg-blue-500 h-32 w-full center flex-col">
+          
         </div>
       </div>
-      <div className="h-screen"/>
       <div className="h-screen"/>
       <div className="h-screen"/>
     </div>

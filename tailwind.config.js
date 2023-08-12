@@ -50,6 +50,9 @@ export default {
         ".heading": {
           "@apply text-text-light font-anton text-2xl": {}
         },
+        ".rounded": {
+          "@apply rounded-lg": {}
+        }
       });
     },
   ],
