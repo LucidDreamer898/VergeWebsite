@@ -7,7 +7,7 @@ export default function HomePage(){
     const element = document.getElementById('scrollable');
     if(!element) return;
     element.onscroll = () => {
-      const percent = element.scrollTop / (element.scrollHeight - element.clientHeight);
+      const percent = element.scrollTop / window.innerHeight;
       setScrollPercent(percent);
     }
 
@@ -18,7 +18,7 @@ export default function HomePage(){
 
   return(
     <div className="h-full overflow-y-scroll overflow-x-clip w-[100vw]" id="scrollable">
-      <img src="/Chassis.png" className="absolute -z-20 w-[100vw] object-cover h-screen" style={{opacity: scrollPercent + 0.2}} alt="Verge Robotics Chassis"/>
+      <img src="/Chassis.png" className="absolute -z-20 w-[100vw] object-cover " style={{opacity: scrollPercent + 0.2}} alt="Verge Robotics Chassis"/>
       <div className="relative center flex-col h-full">
         <img className="absolute -z-10" src="/VectorV.svg" alt="Verge Logo"/>
 
@@ -32,6 +32,14 @@ export default function HomePage(){
           Verge Robotics
         </h2>
       </div>
+      <div className="h-screen flex items-end p-8">
+        <div>
+          <h1 className="font-bold text-2xl text-text-light mb-1">Chassis</h1>
+          <p className="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum pulvinar urna, at fringilla mi pretium a. Nulla sed arcu eu justo sodales molestie eget ut libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque id purus vitae ex consequat sollicitudin eget eu sapien.</p>
+        </div>
+      </div>
+      <div className="h-screen"/>
+      <div className="h-screen"/>
       <div className="h-screen"/>
     </div>
   )

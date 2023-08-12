@@ -11,7 +11,7 @@ export default function App(){
   return(
     <div className="relative h-full" id="app">
       <Navbar/>
-      <div className="h-screen overflow-clip">
+      <div className="h-[100dvh] overflow-clip">
         <Routes>
           <Route path="/home" element={<HomePage/>}/>
           <Route path="/our-team" element={<OurTeam/>}/>

@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <div className='fixed w-full h-screen bg-background text-text'><App/></div>
+        <div className='fixed w-full h-screen bg-background text-text font-quicksand'><App/></div>
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>,
