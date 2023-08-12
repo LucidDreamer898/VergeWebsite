@@ -16,6 +16,10 @@ const queryClient = new QueryClient({
   }
 });
 
+window.onload = () => {
+  document.body.style.display = 'block';
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>

@@ -9,9 +9,9 @@ export default function App(){
   if(path == '/') return <Redirect link="/home"/>
 
   return(
-    <div className="relative h-full">
+    <div className="relative h-full" id="app">
       <Navbar/>
-      <div className="h-full overflow-auto pt-16">
+      <div className="h-screen overflow-clip">
         <Routes>
           <Route path="/home" element={<HomePage/>}/>
           <Route path="/our-team" element={<OurTeam/>}/>
