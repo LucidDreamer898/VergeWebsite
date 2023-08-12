@@ -24,8 +24,8 @@ export default {
           //light: colors.red[300],
         },
         secondary: {
-          //dark: colors.red[700],
-          DEFAULT: "#1F236C",
+          dark: "#08091B",
+          DEFAULT: "#3F73A7",
           //light: colors.red[300],
         },
         accent: {
@@ -35,8 +35,8 @@ export default {
         },
         text: {
           dark: colors.neutral[500],
-          DEFAULT: colors.neutral[400],
-          light: colors.neutral[300],
+          DEFAULT: colors.neutral[300],
+          light: colors.neutral[100],
         },
       }
     },

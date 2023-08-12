@@ -4,7 +4,7 @@ export default function Navbar(){
     Donate: "about",
   }
   return(
-    <div className="absolute top-0 left-0 right-0 h-16 bg-background/50 backdrop-blur z-30 text-xl text-white center font-quicksand">
+    <div className="absolute top-0 left-0 right-0 h-16 bg-background/50 backdrop-blur z-30 text-xl text-text-light center font-quicksand">
       <div className="justify-evenly flex w-2/3">
         <div className="tracking-widest hover:scale-125 transition-all duration-300">About</div>
         <div className="tracking-widest">Chassis</div>
