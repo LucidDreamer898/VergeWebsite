@@ -12,6 +12,7 @@ export default function Navbar(){
         <button className="navbar-element" onClick={() => navigate('/donate')}>Donate</button>
         <button className="navbar-element" onClick={() => navigate('/contact')}>Contact</button>
         <button className="navbar-element" onClick={() => navigate('/season')}>Season</button>
+        <button className="navbar-element" onClick={() => navigate('/our-team')}>Team</button>
       </div>
     </div>
   )
