@@ -17,7 +17,7 @@ export default function OurTeam(){
             team: "Programming"
         },
         {
-            pfp: "https://www.whitehouse.gov/wp-content/uploads/2021/01/45_donald_trump.jpg",
+            pfp: "/ExampleProfilePic.jpg",
             name: "Timothy Zheng",
             role: "Programming Lead",
             bio: "I like to make things in my free time such as electrical contraptions or websites for clubs. I also like to go mountain biking and watch anime",
@@ -63,9 +63,9 @@ export default function OurTeam(){
 
     return(
         <>
-            {/* <div className="flex w-full justify-center h-fit text-5xl">
-                Meet The Team
-            </div> */}
+                <h1 className="flex w-full font-bold font-quicksand text-text-light justify-center h-fit text-5xl">
+                    Meet Our Team
+                </h1>
 
             <div className="flex w-full h-screen p-2 flex-wrap">
             {[...memberCards, ...memberCards, ...memberCards].map((member) => (
