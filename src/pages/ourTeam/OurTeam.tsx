@@ -62,26 +62,27 @@ export default function OurTeam(){
     }, [])
 
     return(
-        <>
-                <h1 className="flex w-full font-bold font-quicksand text-text-light justify-center h-fit text-5xl">
-                    Meet Our Team
-                </h1>
+        <div className="h-full overflow-auto">
+            <h1 className="flex w-full font-bold font-quicksand text-text-light justify-center h-fit text-5xl mt-16">
+                Meet Our Team
+            </h1>
 
             <div className="flex w-full h-screen p-2 flex-wrap">
             {[...memberCards, ...memberCards, ...memberCards].map((member) => (
                 <div className="flex justify-center w-1/4">           
-                <div className="relative flex w-72 border-2 border-secondary/50 h-[512px] rounded-2xl justify-center m-8" onMouseMove={handleMouseMove}>
-                    <img className="flex object-cover rounded-2xl" src={member.pfp}/>
-                    <p className="absolute w-full h-full rounded-2xl bg-gradient-to-t from-secondary-dark/95 from-25%"/>
-                    <p className="absolute flex w-full justify-center font-bold text-text-light bottom-36">{member.name}</p>
-                    <p className="absolute flex w-full justify-center text-sm bottom-32">{member.role}</p>
-                    <p className="absolute px-2 bottom-14 text-center text-xs">{member.bio}</p>
-                    <p className="absolute flex w-1/2 justify-center bottom-4 text-xs bg-secondary/50 border-secondary border-2 rounded-full p-1">{member.team}</p>
+                <div className="relative flex flex-col w-72 border-2 border-secondary/50 h-[512px] rounded-2xl items-center justify-end m-8 p-2 pb-4" onMouseMove={handleMouseMove}>
+                    <img className="absolute -z-20 h-full flex object-cover rounded-2xl" src={member.pfp}/>
+                    <div className="absolute -z-10 w-full h-full rounded-2xl bg-gradient-to-t from-background/95 from-25%"/>
+                    
+                    <p className="flex w-full justify-center font-bold text-text-light bottom-36">{member.name}</p>
+                    <p className="flex w-full justify-center text-sm bottom-32 mb-2">{member.role}</p>
+                    <p className="px-2 bottom-14 text-center text-sm mb-3">{member.bio}</p>
+                    <p className="flex w-1/2 justify-center bottom-4 text-xs bg-secondary/50 border-secondary border-2 rounded-full p-1">{member.team}</p>
                 </div>
                 </div>
                         ))}
                     {/* <p>({localMousePosition.x}, {localMousePosition.y})</p> */}
             </div>
-        </>
+        </div>
     )
 }
