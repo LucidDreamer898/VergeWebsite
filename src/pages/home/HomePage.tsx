@@ -18,7 +18,7 @@ export default function HomePage(){
   }, []);
 
   return(
-    <div className="h-full overflow-y-scroll overflow-x-clip w-[100vw]" id="scrollable">
+    <div className="h-full overflow-auto overflow-x-clip w-[100vw]" id="scrollable">
       {/* <div className="absolute -z-20 w-[100vw] h-full center">
         <img src="/Chassis.png" className="w-full object-cover" style={{opacity: ((scrollPercent * 0.5)+0.5), transform: `scale(${((scrollPercent * 0.2)+0.8)})`}} alt="Verge Robotics Chassis"/>
       </div> */}
