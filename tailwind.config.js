@@ -19,14 +19,14 @@ export default {
           //light: colors.neutral[700],
         },
         primary: {
-          //dark: colors.red[700],
+          //dark: "#1F236C",
           DEFAULT: "#e33748",
-          //light: colors.red[300],
+          //light: "#9CDCE2",
         },
         secondary: {
-          dark: "#08091B",
+          dark: "#1F236C",
           DEFAULT: "#3F73A7",
-          //light: colors.red[300],
+          light: "#9CDCE2",
         },
         accent: {
           //dark: colors.red[700],
@@ -47,6 +47,12 @@ export default {
         ".center": {
           "@apply flex justify-center items-center": {}
         },
+        ".heading": {
+          "@apply text-text-light font-anton text-2xl": {}
+        },
+        ".rounded": {
+          "@apply rounded-lg": {}
+        }
       });
     },
   ],
