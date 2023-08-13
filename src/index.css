@@ -1,5 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Geo&family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Geo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate-numbers {
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate, spread 2s cubic-bezier(0.1, 0.1, 0.1, 1.0);
+  -moz-animation: animatedgradient 6s ease infinite alternate, spread 2s cubic-bezier(0.1, 0.1, 0.1, 1.0);
+  animation: animatedgradient 6s ease infinite alternate, spread 2s cubic-bezier(0.1, 0.1, 0.1, 1.0);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spread{
+  0% {
+    margin-right: 0vw;
+    letter-spacing: 0vw;
+  }
+  100% {
+    margin-right: -10vw;
+    letter-spacing: 10vw;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+
+body{
+  display: none;
+  -webkit-animation: fadeIn 2s cubic-bezier(0.1, 0.1, 0.1, 1.0);
+  -moz-animation: fadeIn 2s cubic-bezier(0.1, 0.1, 0.1, 1.0);
+  animation: fadeIn 2s cubic-bezier(0.1, 0.1, 0.1, 1.0);
+  animation-fill-mode: forwards;
+  @apply transition-all duration-500
+}
+
+.navbar-element{
+  @apply tracking-[2px] transition-all duration-300 hover:tracking-[8px] h-24
+}
+
+h1{
+  @apply text-text-light font-bold text-3xl
+}
